@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>档位配置 - 安雅健康后台</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">安雅健康后台</div>
+            <ul class="sidebar-menu">
+                <li><a href="index.html">📊 数据概览</a></li>
+                <li><a href="users.html">👥 用户管理</a></li>
+                <li><a href="levels.html" class="active">👑 档位配置</a></li>
+                <li><a href="assets.html">💰 资产管理</a></li>
+                <li><a href="mall.html">🛍️ 商城管理</a></li>
+                <li><a href="#">📈 交易市场</a></li>
+                <li><a href="#">⚙️ 系统设置</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div class="top-header">
+                <h3>档位参数配置</h3>
+                <button class="btn btn-success">保存配置</button>
+            </div>
+
+            <div class="card">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>档位名称</th>
+                            <th>开通金额 (元)</th>
+                            <th>赠送积分</th>
+                            <th>赠送贡献数值</th>
+                            <th>赠送贡献积分</th>
+                            <th>商城折扣</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" value="初级合伙人"></td>
+                            <td><input type="number" class="form-control" value="30000"></td>
+                            <td><input type="number" class="form-control" value="30000"></td>
+                            <td><input type="number" class="form-control" value="3000"></td>
+                            <td><input type="number" class="form-control" value="15000"></td>
+                            <td><input type="text" class="form-control" value="0.8"></td>
+                            <td><button class="btn btn-sm">更新</button></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="form-control" value="中级合伙人"></td>
+                            <td><input type="number" class="form-control" value="50000"></td>
+                            <td><input type="number" class="form-control" value="50000"></td>
+                            <td><input type="number" class="form-control" value="6000"></td>
+                            <td><input type="number" class="form-control" value="28000"></td>
+                            <td><input type="text" class="form-control" value="0.75"></td>
+                            <td><button class="btn btn-sm">更新</button></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="form-control" value="高级合伙人"></td>
+                            <td><input type="number" class="form-control" value="100000"></td>
+                            <td><input type="number" class="form-control" value="100000"></td>
+                            <td><input type="number" class="form-control" value="15000"></td>
+                            <td><input type="number" class="form-control" value="60000"></td>
+                            <td><input type="text" class="form-control" value="0.7"></td>
+                            <td><button class="btn btn-sm">更新</button></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="form-control" value="董事合伙人"></td>
+                            <td><input type="number" class="form-control" value="300000"></td>
+                            <td><input type="number" class="form-control" value="300000"></td>
+                            <td><input type="number" class="form-control" value="50000"></td>
+                            <td><input type="number" class="form-control" value="200000"></td>
+                            <td><input type="text" class="form-control" value="0.6"></td>
+                            <td><button class="btn btn-sm">更新</button></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="form-control" value="创始合伙人"></td>
+                            <td><input type="number" class="form-control" value="500000"></td>
+                            <td><input type="number" class="form-control" value="500000"></td>
+                            <td><input type="number" class="form-control" value="100000"></td>
+                            <td><input type="number" class="form-control" value="350000"></td>
+                            <td><input type="text" class="form-control" value="0.5"></td>
+                            <td><button class="btn btn-sm">更新</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="margin-top: 15px; font-size: 12px; color: #666;">
+                    注：修改后实时生效，商城折扣填写小数，如 0.8 代表 8 折。
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

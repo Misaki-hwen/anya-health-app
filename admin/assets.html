@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>资产管理 - 安雅健康后台</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">安雅健康后台</div>
+            <ul class="sidebar-menu">
+                <li><a href="index.html">📊 数据概览</a></li>
+                <li><a href="users.html">👥 用户管理</a></li>
+                <li><a href="levels.html">👑 档位配置</a></li>
+                <li><a href="assets.html" class="active">💰 资产管理</a></li>
+                <li><a href="mall.html">🛍️ 商城管理</a></li>
+                <li><a href="#">📈 交易市场</a></li>
+                <li><a href="#">⚙️ 系统设置</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div class="top-header">
+                <h3>资产管理</h3>
+            </div>
+
+            <!-- Manual Operation -->
+            <div class="card">
+                <h3>💰 资产手动增减 (管理员)</h3>
+                <div class="flex gap-10" style="align-items: flex-end;">
+                    <div class="form-group" style="margin-bottom: 0; flex: 1;">
+                        <label class="form-label">用户账号</label>
+                        <input type="text" class="form-control" placeholder="输入用户手机号/UID">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 0; flex: 1;">
+                        <label class="form-label">资产类型</label>
+                        <select class="form-control">
+                            <option>积分</option>
+                            <option>贡献积分</option>
+                            <option>贡献数值</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 0; flex: 1;">
+                        <label class="form-label">操作类型</label>
+                        <select class="form-control">
+                            <option>增加 (+)</option>
+                            <option>扣除 (-)</option>
+                            <option>冻结</option>
+                            <option>解冻</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 0; flex: 1;">
+                        <label class="form-label">数量</label>
+                        <input type="number" class="form-control" placeholder="0">
+                    </div>
+                    <button class="btn" style="height: 35px;">执行操作</button>
+                </div>
+            </div>
+
+            <!-- Asset Logs -->
+            <div class="card">
+                <h3>📋 资产流水记录</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>流水号</th>
+                            <th>用户</th>
+                            <th>类型</th>
+                            <th>变动金额</th>
+                            <th>变动后余额</th>
+                            <th>说明</th>
+                            <th>时间</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>L20260121001</td>
+                            <td>13800138000</td>
+                            <td>积分</td>
+                            <td style="color: red;">-800</td>
+                            <td>12,000</td>
+                            <td>商城消费</td>
+                            <td>2026-01-21 14:30</td>
+                        </tr>
+                        <tr>
+                            <td>L20260121002</td>
+                            <td>13900139000</td>
+                            <td>贡献数值</td>
+                            <td style="color: green;">+3000</td>
+                            <td>3,000</td>
+                            <td>后台开通初级合伙人</td>
+                            <td>2026-01-21 12:00</td>
+                        </tr>
+                         <tr>
+                            <td>L20260121003</td>
+                            <td>13800138000</td>
+                            <td>贡献积分</td>
+                            <td style="color: red;">-100</td>
+                            <td>4,900</td>
+                            <td>转账给 13900139000</td>
+                            <td>2026-01-21 10:00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

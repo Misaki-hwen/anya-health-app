@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商城管理 - 安雅健康后台</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">安雅健康后台</div>
+            <ul class="sidebar-menu">
+                <li><a href="index.html">📊 数据概览</a></li>
+                <li><a href="users.html">👥 用户管理</a></li>
+                <li><a href="levels.html">👑 档位配置</a></li>
+                <li><a href="assets.html">💰 资产管理</a></li>
+                <li><a href="mall.html" class="active">🛍️ 商城管理</a></li>
+                <li><a href="#">📈 交易市场</a></li>
+                <li><a href="#">⚙️ 系统设置</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div class="top-header">
+                <h3>商城管理</h3>
+                <button class="btn btn-success">+ 新增商品</button>
+            </div>
+
+            <div class="card">
+                <h3>商品列表</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>商品ID</th>
+                            <th>图片</th>
+                            <th>名称</th>
+                            <th>积分价格</th>
+                            <th>库存</th>
+                            <th>类型</th>
+                            <th>状态</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>101</td>
+                            <td><div style="width: 40px; height: 40px; background: #eee;"></div></td>
+                            <td>安雅健康大礼包</td>
+                            <td>1000</td>
+                            <td>999</td>
+                            <td>实物商品</td>
+                            <td><span style="color: green;">上架中</span></td>
+                            <td>
+                                <button class="btn btn-sm">编辑</button>
+                                <button class="btn btn-sm btn-danger">下架</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>102</td>
+                            <td><div style="width: 40px; height: 40px; background: #eee;"></div></td>
+                            <td>高端养生茶</td>
+                            <td>500</td>
+                            <td>500</td>
+                            <td>实物商品</td>
+                            <td><span style="color: green;">上架中</span></td>
+                            <td>
+                                <button class="btn btn-sm">编辑</button>
+                                <button class="btn btn-sm btn-danger">下架</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card">
+                <h3>订单管理</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>订单号</th>
+                            <th>用户</th>
+                            <th>商品</th>
+                            <th>实付积分</th>
+                            <th>状态</th>
+                            <th>时间</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>O20260121001</td>
+                            <td>13800138000</td>
+                            <td>安雅健康大礼包 x1</td>
+                            <td>800 (8折)</td>
+                            <td><span style="color: orange;">待发货</span></td>
+                            <td>2026-01-21 14:30</td>
+                            <td><button class="btn btn-sm">发货</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
