@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商城 - 安雅健康</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .category-scroll {
+            display: flex;
+            overflow-x: auto;
+            padding: 10px 0;
+            background: white;
+            border-bottom: 1px solid #eee;
+        }
+        .category-item {
+            padding: 5px 15px;
+            white-space: nowrap;
+            color: #666;
+            text-decoration: none;
+        }
+        .category-item.active {
+            color: #007bff;
+            font-weight: bold;
+            border-bottom: 2px solid #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="home.html" class="back-btn"><</a>
+        积分商城
+    </div>
+
+    <div class="category-scroll">
+        <a href="#" class="category-item active">全部</a>
+        <a href="#" class="category-item">平价专区</a>
+        <a href="#" class="category-item">会员专区</a>
+        <a href="#" class="category-item">报单专区</a>
+        <a href="#" class="category-item">外部商品</a>
+    </div>
+
+    <div class="container" style="padding-top: 10px;">
+        <div class="grid-2">
+            <!-- Product 1 -->
+            <a href="mall-detail.html" class="card" style="display: block; text-decoration: none; color: inherit; padding: 10px;">
+                <div class="product-img"></div>
+                <div class="mt-10"><b>安雅健康大礼包</b></div>
+                <div class="text-muted" style="font-size: 12px;">库存: 999</div>
+                <div class="mt-10 flex-between align-center">
+                    <div class="text-primary font-bold">1000 积分</div>
+                </div>
+                <div class="tag tag-warning mt-10" style="font-size: 10px;">合伙人8折</div>
+            </a>
+
+            <!-- Product 2 -->
+            <a href="mall-detail.html" class="card" style="display: block; text-decoration: none; color: inherit; padding: 10px;">
+                <div class="product-img"></div>
+                <div class="mt-10"><b>高端养生茶</b></div>
+                <div class="text-muted" style="font-size: 12px;">库存: 500</div>
+                <div class="mt-10 flex-between align-center">
+                    <div class="text-primary font-bold">500 积分</div>
+                </div>
+                <div class="tag tag-warning mt-10" style="font-size: 10px;">合伙人8折</div>
+            </a>
+
+            <!-- Product 3 -->
+            <a href="mall-detail.html" class="card" style="display: block; text-decoration: none; color: inherit; padding: 10px;">
+                <div class="product-img"></div>
+                <div class="mt-10"><b>智能健康手环</b></div>
+                <div class="text-muted" style="font-size: 12px;">库存: 200</div>
+                <div class="mt-10 flex-between align-center">
+                    <div class="text-primary font-bold">2000 积分</div>
+                </div>
+                <div class="tag tag-warning mt-10" style="font-size: 10px;">合伙人8折</div>
+            </a>
+             <!-- Product 4 -->
+             <a href="mall-detail.html" class="card" style="display: block; text-decoration: none; color: inherit; padding: 10px;">
+                <div class="product-img"></div>
+                <div class="mt-10"><b>有机大米 5KG</b></div>
+                <div class="text-muted" style="font-size: 12px;">库存: 1000</div>
+                <div class="mt-10 flex-between align-center">
+                    <div class="text-primary font-bold">300 积分</div>
+                </div>
+                <div class="tag tag-warning mt-10" style="font-size: 10px;">合伙人8折</div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+        <a href="home.html" class="nav-item">
+            <span class="nav-icon">🏠</span>
+            首页
+        </a>
+        <a href="mall.html" class="nav-item active">
+            <span class="nav-icon">🛍️</span>
+            商城
+        </a>
+        <a href="trade.html" class="nav-item">
+            <span class="nav-icon">📈</span>
+            交易
+        </a>
+        <a href="profile.html" class="nav-item">
+            <span class="nav-icon">👤</span>
+            我的
+        </a>
+    </div>
+</body>
+</html>

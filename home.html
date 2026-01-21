@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页 - 安雅健康</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .asset-card {
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .level-badge {
+            background-color: rgba(255,255,255,0.2);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .asset-value { font-size: 24px; font-weight: bold; }
+        .asset-label { font-size: 12px; opacity: 0.8; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        安雅健康
+    </div>
+
+    <div class="container">
+        <!-- User Assets Card -->
+        <div class="asset-card">
+            <div class="flex-between align-center">
+                <div>
+                    <div class="level-badge">初级合伙人</div>
+                    <div>用户：138****8000</div>
+                </div>
+                <div style="font-size: 24px;">💎</div>
+            </div>
+            <div class="mt-20 flex-between">
+                <div>
+                    <div class="asset-value">12,000</div>
+                    <div class="asset-label">当前积分</div>
+                </div>
+                <div>
+                    <div class="asset-value">5,000</div>
+                    <div class="asset-label">贡献积分</div>
+                </div>
+                <div>
+                    <div class="asset-value">800</div>
+                    <div class="asset-label">贡献数值</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="card">
+            <div class="grid-4">
+                <a href="mall.html" class="menu-item">
+                    <div class="menu-icon">🛍️</div>
+                    <div>商城</div>
+                </a>
+                <a href="trade.html" class="menu-item">
+                    <div class="menu-icon">📈</div>
+                    <div>交易</div>
+                </a>
+                <a href="wallet.html" class="menu-item">
+                    <div class="menu-icon">💳</div>
+                    <div>转账</div>
+                </a>
+                <a href="team.html" class="menu-item">
+                    <div class="menu-icon">👥</div>
+                    <div>邀请</div>
+                </a>
+            </div>
+        </div>
+
+        <!-- News / Banner -->
+        <div class="card">
+            <div class="card-title">平台公告</div>
+            <div class="list-item">
+                <div>🎉 欢迎加入安雅健康产业平台</div>
+                <div class="text-muted">刚刚</div>
+            </div>
+            <div class="list-item">
+                <div>📢 贡献积分交易市场开放通知</div>
+                <div class="text-muted">1小时前</div>
+            </div>
+        </div>
+
+        <!-- Recommended Products -->
+        <div class="card">
+            <div class="card-title flex-between">
+                <span>推荐商品</span>
+                <a href="mall.html" style="font-size: 12px; text-decoration: none;">查看更多 ></a>
+            </div>
+            <div class="grid-2">
+                <a href="mall-detail.html" style="text-decoration: none; color: inherit;">
+                    <div>
+                        <div class="product-img" style="background-color: #e0e0e0;"></div>
+                        <div class="mt-10">安雅健康大礼包</div>
+                        <div class="text-primary font-bold">1000 积分</div>
+                        <div class="tag tag-warning" style="font-size: 10px;">合伙人8折</div>
+                    </div>
+                </a>
+                <a href="mall-detail.html" style="text-decoration: none; color: inherit;">
+                    <div>
+                        <div class="product-img" style="background-color: #e0e0e0;"></div>
+                        <div class="mt-10">高端养生茶</div>
+                        <div class="text-primary font-bold">500 积分</div>
+                        <div class="tag tag-warning" style="font-size: 10px;">合伙人8折</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+        <a href="home.html" class="nav-item active">
+            <span class="nav-icon">🏠</span>
+            首页
+        </a>
+        <a href="mall.html" class="nav-item">
+            <span class="nav-icon">🛍️</span>
+            商城
+        </a>
+        <a href="trade.html" class="nav-item">
+            <span class="nav-icon">📈</span>
+            交易
+        </a>
+        <a href="profile.html" class="nav-item">
+            <span class="nav-icon">👤</span>
+            我的
+        </a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>交易窗口 - 安雅健康</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        function setAction(type) {
+            const btnBuy = document.getElementById('btn-buy');
+            const btnSell = document.getElementById('btn-sell');
+            const actionBtn = document.getElementById('action-btn');
+            
+            if (type === 'buy') {
+                btnBuy.classList.add('active');
+                btnBuy.style.background = '#28a745';
+                btnBuy.style.color = 'white';
+                
+                btnSell.classList.remove('active');
+                btnSell.style.background = '#eee';
+                btnSell.style.color = '#333';
+
+                actionBtn.innerText = '买入贡献积分';
+                actionBtn.style.backgroundColor = '#28a745';
+            } else {
+                btnSell.classList.add('active');
+                btnSell.style.background = '#dc3545';
+                btnSell.style.color = 'white';
+                
+                btnBuy.classList.remove('active');
+                btnBuy.style.background = '#eee';
+                btnBuy.style.color = '#333';
+
+                actionBtn.innerText = '卖出贡献积分';
+                actionBtn.style.backgroundColor = '#dc3545';
+            }
+        }
+    </script>
+    <style>
+        .trade-header {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .trade-type-btn {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .order-book {
+            font-size: 12px;
+        }
+        .order-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="home.html" class="back-btn"><</a>
+        贡献积分交易
+    </div>
+
+    <div class="container">
+        <!-- Market Info -->
+        <div class="card">
+            <div class="flex-between align-center">
+                <div>
+                    <div class="text-muted">当前价格</div>
+                    <div class="text-success" style="font-size: 24px; font-weight: bold;">1.20</div>
+                </div>
+                <div>
+                    <div class="tag tag-success">+5.2%</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <!-- Trade Form -->
+            <div>
+                <div class="trade-header">
+                    <div id="btn-buy" class="trade-type-btn" style="background: #28a745; color: white; margin-right: 5px;" onclick="setAction('buy')">买入</div>
+                    <div id="btn-sell" class="trade-type-btn" style="background: #eee; margin-left: 5px;" onclick="setAction('sell')">卖出</div>
+                </div>
+
+                <div class="form-group">
+                    <label style="font-size: 12px;">价格 (积分)</label>
+                    <input type="number" class="form-control" value="1.20">
+                </div>
+                <div class="form-group">
+                    <label style="font-size: 12px;">数量 (贡献积分)</label>
+                    <input type="number" class="form-control" placeholder="数量">
+                </div>
+                <div class="text-muted mb-10" style="font-size: 12px;">可用: 12,000 积分</div>
+                
+                <button id="action-btn" class="btn" style="background-color: #28a745;">买入贡献积分</button>
+            </div>
+
+            <!-- Order Book -->
+            <div class="card" style="margin-bottom: 0; height: fit-content;">
+                <div class="card-title" style="font-size: 14px;">盘口</div>
+                <div class="order-book">
+                    <div class="order-row text-danger">
+                        <span>卖5</span> <span>1.25</span> <span>500</span>
+                    </div>
+                    <div class="order-row text-danger">
+                        <span>卖4</span> <span>1.24</span> <span>200</span>
+                    </div>
+                    <div class="order-row text-danger">
+                        <span>卖3</span> <span>1.23</span> <span>150</span>
+                    </div>
+                    <div class="order-row text-danger">
+                        <span>卖2</span> <span>1.22</span> <span>1000</span>
+                    </div>
+                    <div class="order-row text-danger">
+                        <span>卖1</span> <span>1.21</span> <span>300</span>
+                    </div>
+                    <hr style="border: 0; border-top: 1px dashed #ddd; margin: 5px 0;">
+                    <div class="order-row text-success">
+                        <span>买1</span> <span>1.20</span> <span>500</span>
+                    </div>
+                    <div class="order-row text-success">
+                        <span>买2</span> <span>1.19</span> <span>800</span>
+                    </div>
+                    <div class="order-row text-success">
+                        <span>买3</span> <span>1.18</span> <span>1200</span>
+                    </div>
+                    <div class="order-row text-success">
+                        <span>买4</span> <span>1.17</span> <span>400</span>
+                    </div>
+                    <div class="order-row text-success">
+                        <span>买5</span> <span>1.16</span> <span>100</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- My Orders -->
+        <div class="card mt-20">
+            <div class="card-title">我的挂单</div>
+            <div class="list-item">
+                <div>
+                    <div class="text-success font-bold">买入 100 贡献积分</div>
+                    <div class="text-muted" style="font-size: 12px;">价格: 1.15 | 2026-01-21</div>
+                </div>
+                <button class="btn btn-sm btn-outline" style="border-color: #dc3545; color: #dc3545;">撤单</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+        <a href="home.html" class="nav-item">
+            <span class="nav-icon">🏠</span>
+            首页
+        </a>
+        <a href="mall.html" class="nav-item">
+            <span class="nav-icon">🛍️</span>
+            商城
+        </a>
+        <a href="trade.html" class="nav-item active">
+            <span class="nav-icon">📈</span>
+            交易
+        </a>
+        <a href="profile.html" class="nav-item">
+            <span class="nav-icon">👤</span>
+            我的
+        </a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人中心 - 安雅健康</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .profile-header {
+            background-color: #007bff;
+            color: white;
+            padding: 30px 20px;
+            display: flex;
+            align-items: center;
+        }
+        .avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: white;
+            margin-right: 15px;
+            border: 2px solid rgba(255,255,255,0.5);
+        }
+        .menu-list {
+            background: white;
+            margin-top: 20px;
+        }
+        .menu-row {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+        }
+        .menu-row:last-child { border-bottom: none; }
+    </style>
+</head>
+<body>
+    <div class="profile-header">
+        <div class="avatar"></div>
+        <div>
+            <div style="font-size: 18px; font-weight: bold;">用户 138****8000</div>
+            <div class="tag tag-warning mt-10" style="background: rgba(255,255,255,0.2); color: white;">初级合伙人</div>
+        </div>
+    </div>
+
+    <div class="container" style="padding-top: 0;">
+        <div class="menu-list card" style="padding: 0;">
+            <a href="#" class="menu-row">
+                <span>实名认证</span>
+                <span class="text-muted">已认证 ></span>
+            </a>
+            <a href="#" class="menu-row">
+                <span>收货地址</span>
+                <span class="text-muted">></span>
+            </a>
+            <a href="#" class="menu-row">
+                <span>安全设置</span>
+                <span class="text-muted">></span>
+            </a>
+        </div>
+
+        <div class="menu-list card" style="padding: 0;">
+            <a href="#" class="menu-row">
+                <span>联系客服</span>
+                <span class="text-muted">></span>
+            </a>
+            <a href="#" class="menu-row">
+                <span>关于我们</span>
+                <span class="text-muted">></span>
+            </a>
+        </div>
+
+        <button class="btn btn-outline mt-20" style="color: #dc3545; border-color: #dc3545;" onclick="window.location.href='index.html'">退出登录</button>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+        <a href="home.html" class="nav-item">
+            <span class="nav-icon">🏠</span>
+            首页
+        </a>
+        <a href="mall.html" class="nav-item">
+            <span class="nav-icon">🛍️</span>
+            商城
+        </a>
+        <a href="trade.html" class="nav-item">
+            <span class="nav-icon">📈</span>
+            交易
+        </a>
+        <a href="profile.html" class="nav-item active">
+            <span class="nav-icon">👤</span>
+            我的
+        </a>
+    </div>
+</body>
+</html>

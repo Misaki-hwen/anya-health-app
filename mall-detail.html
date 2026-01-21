@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品详情 - 安雅健康</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .detail-img {
+            width: 100%;
+            height: 250px;
+            background-color: #eee;
+            object-fit: cover;
+        }
+        .footer-action {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            max-width: 480px;
+            background: white;
+            border-top: 1px solid #ddd;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body style="padding-bottom: 70px;">
+    <div class="header" style="background: transparent; position: absolute; top:0; width: 100%; box-shadow: none;">
+        <a href="mall.html" class="back-btn" style="background: rgba(0,0,0,0.3); width: 30px; height: 30px; line-height: 30px; border-radius: 50%; text-align: center; display: block;"><</a>
+    </div>
+
+    <div class="detail-img"></div>
+
+    <div class="container">
+        <div class="card">
+            <h2 class="mb-10">安雅健康大礼包</h2>
+            <div class="flex-between align-center">
+                <div class="text-primary" style="font-size: 24px; font-weight: bold;">1000 积分</div>
+                <div class="text-muted">已售 120</div>
+            </div>
+            <div class="mt-10">
+                <span class="tag tag-warning">初级合伙人享 8 折优惠</span>
+                <span class="tag tag-success">包邮</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">商品详情</div>
+            <div style="line-height: 1.6; color: #666;">
+                <p>这里是商品的详细介绍。</p>
+                <p>包含了健康产品的各种优势，使用方法等。</p>
+                <p>1. 纯天然成分</p>
+                <p>2. 科学配比</p>
+                <p>3. 适合全家使用</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-action">
+        <div style="flex: 1;">
+            <div>实付: <span class="text-danger font-bold" style="font-size: 20px;">800 积分</span></div>
+            <div class="text-muted" style="font-size: 12px; text-decoration: line-through;">原价: 1000 积分</div>
+        </div>
+        <button class="btn" style="width: 150px;" onclick="alert('下单成功！扣除800积分')">立即购买</button>
+    </div>
+
+</body>
+</html>

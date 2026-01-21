@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录 - 安雅健康</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="padding-bottom: 0;">
+
+    <div class="container" style="padding-top: 50px;">
+        <div class="text-center mb-20">
+            <h1>安雅健康</h1>
+            <p class="text-muted">健康生活，由此开始</p>
+        </div>
+
+        <div class="card">
+            <h2 class="text-center">用户登录</h2>
+            <form action="home.html" onsubmit="return handleLogin(event)">
+                <div class="form-group">
+                    <label>手机号</label>
+                    <input type="tel" class="form-control" placeholder="请输入手机号" value="13800138000" required>
+                </div>
+                <div class="form-group">
+                    <label>验证码</label>
+                    <div class="flex">
+                        <input type="text" class="form-control" placeholder="请输入验证码" value="1234" required>
+                        <button type="button" class="btn btn-outline" style="width: 100px; margin-left: 10px;">获取</button>
+                    </div>
+                </div>
+                <button type="submit" class="btn">登录 / 注册</button>
+            </form>
+            <div class="text-center mt-10">
+                <a href="#" class="text-muted" style="font-size: 12px;">注册即代表同意《用户协议》</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function handleLogin(e) {
+            e.preventDefault();
+            // In a real app, we would validate and call API
+            // For demo, just redirect
+            window.location.href = 'home.html';
+            return false;
+        }
+    </script>
+</body>
+</html>

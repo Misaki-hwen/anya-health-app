@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的钱包 - 安雅健康</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.style.display = 'none');
+            document.getElementById(tabId).style.display = 'block';
+            document.querySelectorAll('.segment-btn').forEach(el => el.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+    </script>
+    <style>
+        .segment-control {
+            display: flex;
+            background: #eee;
+            border-radius: 8px;
+            padding: 4px;
+            margin-bottom: 20px;
+        }
+        .segment-btn {
+            flex: 1;
+            text-align: center;
+            padding: 8px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .segment-btn.active {
+            background: white;
+            font-weight: bold;
+            color: #007bff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .asset-box {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="home.html" class="back-btn"><</a>
+        我的钱包
+    </div>
+
+    <div class="container">
+        <div class="segment-control">
+            <div class="segment-btn active" onclick="switchTab('assets')">资产概览</div>
+            <div class="segment-btn" onclick="switchTab('transfer')">转账</div>
+            <div class="segment-btn" onclick="switchTab('history')">流水</div>
+        </div>
+
+        <!-- Assets Tab -->
+        <div id="assets" class="tab-content">
+            <div class="card">
+                <div class="card-title">当前资产</div>
+                
+                <div class="asset-box">
+                    <div>
+                        <div class="text-muted">积分余额</div>
+                        <div style="font-size: 20px; font-weight: bold;">12,000</div>
+                    </div>
+                    <button class="btn btn-sm btn-outline">充值</button>
+                </div>
+
+                <div class="asset-box">
+                    <div>
+                        <div class="text-muted">贡献积分</div>
+                        <div style="font-size: 20px; font-weight: bold;">5,000</div>
+                    </div>
+                    <a href="trade.html" class="btn btn-sm btn-outline">去交易</a>
+                </div>
+
+                <div class="asset-box">
+                    <div>
+                        <div class="text-muted">贡献数值</div>
+                        <div style="font-size: 20px; font-weight: bold;">800</div>
+                    </div>
+                    <div class="tag tag-primary">用于邀请计算</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Transfer Tab -->
+        <div id="transfer" class="tab-content" style="display: none;">
+            <div class="card">
+                <div class="card-title">资产转让</div>
+                <form onsubmit="alert('转账申请已提交'); return false;">
+                    <div class="form-group">
+                        <label>转让资产类型</label>
+                        <select class="form-control">
+                            <option>积分</option>
+                            <option>贡献积分</option>
+                            <option>贡献数值</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>对方账号/手机号</label>
+                        <input type="tel" class="form-control" placeholder="请输入对方手机号">
+                    </div>
+                    <div class="form-group">
+                        <label>转让数量</label>
+                        <input type="number" class="form-control" placeholder="请输入数量">
+                    </div>
+                    <div class="form-group">
+                        <label>支付密码</label>
+                        <input type="password" class="form-control" placeholder="请输入6位支付密码">
+                    </div>
+                    <button type="submit" class="btn">确认转让</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- History Tab -->
+        <div id="history" class="tab-content" style="display: none;">
+            <div class="card">
+                <div class="list-item">
+                    <div>
+                        <div>商城购物</div>
+                        <div class="text-muted" style="font-size: 12px;">2026-01-21 14:30</div>
+                    </div>
+                    <div class="text-danger">-800 积分</div>
+                </div>
+                <div class="list-item">
+                    <div>
+                        <div>后台开通档位赠送</div>
+                        <div class="text-muted" style="font-size: 12px;">2026-01-20 10:00</div>
+                    </div>
+                    <div class="text-success">+10,000 积分</div>
+                </div>
+                <div class="list-item">
+                    <div>
+                        <div>贡献积分转入</div>
+                        <div class="text-muted" style="font-size: 12px;">2026-01-19 18:20</div>
+                    </div>
+                    <div class="text-success">+500 贡献积分</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
